@@ -24,6 +24,26 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Laboratory work 1
+ *
+ * <p>This class solves the problem of counting the number of mentions
+ * <br>of each word from the titles-a.txt file (except words from stopwords.txt).
+ * <br>The MapReduce algorithm is used to solve this problem.
+ *
+ * <p>Input data:
+ * <br>- titles-a.txt - contains the titles of articles from Wikipedia;
+ * <br>- stopwords.txt - contains stop words;
+ * <br>- delimiters.txt - contains punctuation marks.
+ *
+ * <p>Output data:
+ * <br>- file - text file contains result.
+ *
+ * <p>Example output data:
+ * <br>world 123
+ * <br>home 34
+ * <br>dream 390
+ * */
 public class TitleCount extends Configured implements Tool {
     public static void main(String[] args) throws Exception {
         int res = ToolRunner.run(new Configuration(), new TitleCount(), args);

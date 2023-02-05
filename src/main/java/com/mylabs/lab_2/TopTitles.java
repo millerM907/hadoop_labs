@@ -22,6 +22,29 @@ import java.io.InputStreamReader;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Laboratory work 2
+ *
+ * <p>This class solves the problem of counting the number of mentions
+ * <br>of each word from the titles-a.txt file (except words from stopwords.txt)
+ * <br>and then saves top N words in output file.
+ * <br>The MapReduce algorithm is used to solve this problem.
+ *
+ * <p>Input data:
+ * <br>- titles-b.txt - contains the titles of articles from Wikipedia;
+ * <br>- stopwords.txt - contains stop words;
+ * <br>- delimiters.txt - contains punctuation marks,
+ * <br>- N - is the number of top words stored in the output file (entered from the keyboard).
+ *
+ * <p>Output data:
+ * <br>- file - text file contains result.
+ *
+ * <p>Example output data for N = 4:
+ * <br>world 38
+ * <br>home 80
+ * <br>dream 122
+ * <br>fly 123
+ * */
 public class TopTitles extends Configured implements Tool {
 
     public static void main(String[] args) throws Exception {

@@ -22,6 +22,36 @@ import java.io.InputStreamReader;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Laboratory work 3
+ *
+ * <p>This class solves some problems:
+ * <br>1) counting the number of mentions of each word from the titles-a.txt file (except words from stopwords.txt);
+ * <br>2) saving top N words in output file;
+ * <br>3) calculating statistical indicators:
+ * <br>- arithmetic mean of the number of top N words;
+ * <br>- max;
+ * <br>- min;
+ * <br>- sum;
+ * <br>- velocity.
+ * <br>The MapReduce algorithm is used to solve this problem.
+ *
+ * <p>Input data:
+ * <br>- titles-b.txt - contains the titles of articles from Wikipedia;
+ * <br>- stopwords.txt - contains stop words;
+ * <br>- delimiters.txt - contains punctuation marks,
+ * <br>- N - is the number of top words stored in the output file (entered from the keyboard).
+ *
+ * <p>Output data:
+ * <br>- file - text file contains result.
+ *
+ * <p>Example output data for N = 10:
+ * <br>Mean	337
+ * <br>Sum	1685
+ * <br>Min	255
+ * <br>Max	461
+ * <br>Var	7908
+ * */
 public class TopTitleStatistics extends Configured implements Tool {
     public static void main(String[] args) throws Exception {
         int res = ToolRunner.run(new Configuration(), new TopTitleStatistics(), args);
